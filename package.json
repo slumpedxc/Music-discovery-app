@@ -1,0 +1,24 @@
+{
+  "name": "music-discovery-app",
+  "version": "1.0.0",
+  "description": "A modern music recommendation website that helps discover new tracks based on vibe and energy",
+  "keywords": ["music", "recommendations", "lastfm", "react", "fastapi", "discovery", "vibe"],
+  "author": "Music Discovery Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/music-discovery-app.git"
+  },
+  "scripts": {
+    "setup": "./setup.sh",
+    "dev:backend": "cd backend && source venv/bin/activate && uvicorn server:app --reload --port 8001",
+    "dev:frontend": "cd frontend && yarn start",
+    "build:frontend": "cd frontend && yarn build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.11.0"
+  }
+}
