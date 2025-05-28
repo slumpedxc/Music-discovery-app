@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - LASTFM_API_KEY=${LASTFM_API_KEY}
+      - MONGO_URI=${MONGO_URI}
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
